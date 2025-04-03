@@ -12,7 +12,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
-
+/*
+класс пользователь
+используется одновременно как entity для базы данных
+и как userDetails для security
+*/
 @Table(name = "_user")
 @Data
 @Builder

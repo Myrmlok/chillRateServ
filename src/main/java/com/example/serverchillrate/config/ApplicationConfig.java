@@ -17,7 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationConfig {
-    UserRepository repository;
+    private  final UserRepository repository;
     @Bean
     public UserDetailsService userDetailsService(){
         return username -> repository.findByUsername(username).orElseThrow(()->new UsernameNotFoundException("user not found"));

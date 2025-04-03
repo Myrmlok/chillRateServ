@@ -18,6 +18,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 /*
 фильтр jwt регистрирующий пользователя при наличии и актульности токена.
+токен переадаётся в header с параметрами
+key=Authorization
+value=Client <token>
  */
 @Component
 @RequiredArgsConstructor
